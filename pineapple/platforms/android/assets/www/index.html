@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <!--<script src="cordova.js"></script>-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+
+    <title>Pineapple</title>
+</head>
+
+<script>
+    function myFunction() {
+
+        console.log("You button was pressed");
+
+    };
+</script>
+
+<body>
+
+    <!-- Start of first page -->
+    <div data-role="page" id="Home">
+
+        <div data-role="header">
+            <h1>Kcal</h1>
+        </div>
+        <!-- /header -->
+
+        <div role="main" class="ui-content">
+            <p>I'm first in the source order so I'm shown as the page.</p>
+            <p>View internal page called <a href="#Food">bar</a></p>
+        </div>
+        <!-- /content -->
+
+        <div data-role="footer">
+            <h4>Page Footer</h4>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /page -->
+
+    <!-- Start of second page -->
+    <div data-role="page" id="Food">
+
+        <div data-role="header">
+            <h1>Water</h1>
+        </div>
+        <h2>0</h2>
+        <!-- /header -->
+
+        <div role="main" class="ui-content">
+            <p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
+
+            <button id="optellen" onclick="document.getElementById('myImage').src='img/WaterFull.png',myFunction();">+</button>
+            <center><img id="myImage" src="img/Water.png" style="width:100px"></center>
+            <button id="aftrekken" onclick="document.getElementById('myImage').src='img/Water.png'">-</button>
+
+            <p><a href="#Home">Back to foo</a></p>
+        </div>
+        <!-- /content -->
+
+        <div data-role="footer">
+            <h4>Page Footer</h4>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /page -->
+
+    <!-- Start of third page -->
+    <div data-role="page" id="Water">
+
+        <div data-role="header">
+            <h1>Drinken</h1>
+        </div>
+        <!-- /header -->
+
+        <div role="main" class="ui-content">
+            <p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
+            <p><a href="#foo">Back to foo</a></p>
+        </div>
+        <!-- /content -->
+
+        <div data-role="footer">
+            <h4>Page Footer</h4>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /page -->
+
+</body>
+
+</html>
